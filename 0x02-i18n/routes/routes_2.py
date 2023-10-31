@@ -2,6 +2,7 @@
 """Basic route task 1"""
 from flask import Blueprint, render_template
 
+
 app_routes = Blueprint('app_routes', __name__)
 
 
