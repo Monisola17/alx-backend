@@ -26,7 +26,8 @@ class Config(object):
     BABEL_DEFAULT_TIMEZONE = 'UTC'
 
 
-app.config.from_object('5-app.Config')
+app.config.from_object(Config)
+app.register_blueprint(app_routes)
 
 
 @babel.localeselector
