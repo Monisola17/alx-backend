@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """ 3-app module """
-from typing import Union
 from flask import Flask, request
 from flask_babel import Babel
 from routes.routes_3 import app_routes
@@ -22,7 +21,7 @@ app.register_blueprint(app_routes)
 
 
 @babel.localeselector
-def get_locale() -> Union[str, None]:
+def get_locale() -> str:
     """ get locale
     """
     return request.accept_languages.best_match(Config.LANGUAGES)
